@@ -59,7 +59,9 @@ body {
   background-image: url(../images/body-bg.jpg);
   background-size: cover;
   background-position: center;
-  background-repeat: repeat-y;
+  background-repeat: repeat;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Header */
@@ -83,13 +85,14 @@ body {
     top: 0;
     left: 50%;
     translate: -50% 0;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: var(--m-small);
     border-radius: var(--br-large);
     border: 2px solid var(--clr-50);
-    backdrop-filter: blur(10px);
+    background-color: var(--clr-500);
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -117,6 +120,7 @@ body {
         color: var(--clr-50);
         font-weight: bolder;
         font-size: var(--fs-normal);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
       }
     }
 
@@ -131,6 +135,7 @@ body {
           font-weight: lighter;
           position: relative;
           display: block;
+          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
           &:hover,
           &:focus-visible {
             &::after {
@@ -214,6 +219,8 @@ body {
   .head-button-container {
     background-image: url(../images/body-bg.jpg);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: var(--br-large) 0 0 0;
     padding: var(--p-small) var(--p-small) 0 var(--p-small);
     justify-self: end;
@@ -224,23 +231,23 @@ body {
       content: " ";
       width: 2rem;
       height: 2rem;
+      background-color: var(--clr-500);
       border-radius: 0 0 90% 0;
-      border-bottom: 1rem solid var(--clr-50);
-      border-right: 1rem solid var(--clr-50);
+      z-index: 1;
     }
 
     &::after {
       position: absolute;
       top: 0;
       right: 0;
-      translate: 1rem calc(-100% + 1rem);
+      translate: 0 -100%;
     }
 
     &::before {
       position: absolute;
       bottom: 0;
       left: 0;
-      translate: calc(-100% + 1rem) 1rem;
+      translate: -100% 0;
     }
 
     .head-btn {
@@ -252,12 +259,36 @@ body {
       font-size: var(--fs-large);
       cursor: pointer;
       background: transparent;
+      position: relative;
 
       &:hover,
       &:focus-visible {
         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75) inset;
         -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75) inset;
         -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75) inset;
+      }
+
+      &::after,
+      &::before {
+        content: "";
+        width: 2rem;
+        height: 2rem;
+        background-image: url(../images/body-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      &::after {
+        position: absolute;
+        bottom: -3px;
+        right: calc(100% + 2.5px + var(--p-small));
+      }
+
+      &::before {
+        position: absolute;
+        right: calc(var(--p-small) * -1 - 3px);
+        bottom: calc(100% + 2.5px + var(--p-small));
       }
     }
   }
