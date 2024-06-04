@@ -49,13 +49,17 @@
   --gap-normal: 1rem;
 }
 
+/* HTML */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Body */
 body {
   background-image: url(/images/body-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: repeat-y;
-  scroll-behavior: smooth;
 }
 
 /* Header */
