@@ -56,7 +56,7 @@ html {
 
 /* Body */
 body {
-  background-image: url(/images/body-bg.jpg);
+  background-image: url(../images/body-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: repeat-y;
@@ -157,6 +157,7 @@ body {
     padding-block: var(--p-large);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
     gap: var(--gap-normal);
     align-items: center;
 
@@ -199,20 +200,19 @@ body {
     }
 
     .head-img {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .img {
-        width: 15rem;
-        aspect-ratio: 1/1;
-        object-fit: cover;
-        object-position: center;
-      }
+      justify-self: center;
+      width: 50%;
+      aspect-ratio: 1/1;
+      background-image: url(../images/Logo-new.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      overflow: hidden;
     }
   }
 
   .head-button-container {
-    background-image: url(/images/body-bg.jpg);
+    background-image: url(../images/body-bg.jpg);
     background-size: cover;
     border-radius: var(--br-large) 0 0 0;
     padding: var(--p-small) var(--p-small) 0 var(--p-small);
@@ -276,7 +276,7 @@ body {
   .about-image-container {
     width: 100%;
     aspect-ratio: 1/1;
-    background-image: url(/images/about.jpg);
+    background-image: url(../images/about.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
