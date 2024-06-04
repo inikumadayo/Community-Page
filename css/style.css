@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +8,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 :root {
@@ -69,7 +70,7 @@ body {
   .navigation-container {
     width: 70%;
     padding-inline: var(--p-large);
-    padding-block: var(--br-small);
+    padding-block: var(--p-extrasmall);
     justify-self: center;
     position: fixed;
     top: 0;
@@ -84,6 +85,24 @@ body {
     backdrop-filter: blur(20%);
 
     .brand-link {
+      position: relative;
+      display: block;
+      &:hover,
+      &:focus-visible {
+        &::after {
+          content: "";
+          position: absolute;
+          width: 2rem;
+          height: calc(var(--p-extrasmall) / 2);
+          background-color: var(--clr-50);
+          bottom: calc(var(--p-extrasmall) * -1 - 2px);
+          right: 50%;
+          translate: 50% 0;
+          border-radius: var(--br-normal) var(--br-normal) 0 0;
+          border-top: 2px solid var(--clr-50);
+          border-inline: 2px solid var(--clr-50);
+        }
+      }
       .brand {
         color: var(--clr-50);
         font-weight: bolder;
@@ -100,6 +119,24 @@ body {
           color: var(--clr-50);
           font-size: var(--fs-normal);
           font-weight: lighter;
+          position: relative;
+          display: block;
+          &:hover,
+          &:focus-visible {
+            &::after {
+              content: "";
+              position: absolute;
+              width: 2rem;
+              height: calc(var(--p-extrasmall) / 2);
+              background-color: var(--clr-50);
+              bottom: calc(var(--p-extrasmall) * -1 - 2px);
+              right: 50%;
+              translate: 50% 0;
+              border-radius: var(--br-normal) var(--br-normal) 0 0;
+              border-top: 2px solid var(--clr-50);
+              border-inline: 2px solid var(--clr-50);
+            }
+          }
         }
       }
     }
@@ -167,7 +204,7 @@ body {
   .head-button-container {
     background-color: var(--clr-50);
     border-radius: var(--br-large) 0 0 0;
-    padding: var(--p-small) 0 0 var(--p-small);
+    padding: var(--p-small) var(--p-small) 0 var(--p-small);
     justify-self: end;
     position: relative;
 
@@ -203,6 +240,13 @@ body {
       border: 3px solid var(--clr-600);
       font-size: var(--fs-large);
       cursor: pointer;
+
+      &:hover,
+      &:focus-visible {
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75) inset;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75) inset;
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75) inset;
+      }
     }
   }
 }
