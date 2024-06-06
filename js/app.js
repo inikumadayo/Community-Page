@@ -12,7 +12,7 @@ const featuresTvos = document.querySelector(".tvos");
 const items = [featuresApp, featuresWebsite, featuresAdmin, featuresTvos];
 
 function classCheck(btn) {
-  return btn.element.classList.contains("features-active");
+  return btn.classList.contains("features-active");
 }
 
 function addClass(add) {
@@ -24,17 +24,35 @@ function removeClass(rm) {
 }
 
 function active(on, con) {
-  btn.forEach((item) => removeClass(item));
+  btn.forEach((item) => {
+    if (classCheck(item)) {
+      removeClass(item);
+    } else return;
+  });
   items.forEach((item) => {
     item.style.display = "none";
   });
-  return setTimeout(() => {
-    addClass(on);
-    con.style.display = "grid";
-  }, 50);
+  addClass(on);
+  con.style.display = "grid";
+  return;
 }
 
 appBtn.addEventListener("click", () => active(appBtn, featuresApp));
 websiteBtn.addEventListener("click", () => active(websiteBtn, featuresWebsite));
 adminBtn.addEventListener("click", () => active(adminBtn, featuresAdmin));
 tvosBtn.addEventListener("click", () => active(tvosBtn, featuresTvos));
+
+// Contact logic
+const question = document.querySelectorAll(".question");
+
+[].forEach.call(question, (el) => {
+  el.addEventListener("click", btnClick, false);
+});
+
+function btnClick() {
+  [].forEach.call(question, (el) => {
+    if (el !== this) el.classList.remove("question-active");
+  });
+
+  this.classList.toggle("question-active");
+}
