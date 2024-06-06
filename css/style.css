@@ -498,30 +498,26 @@ body {
     .menu-features-items {
       width: 100%;
       height: auto;
-      place-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      cursor: pointer;
+      padding-inline: var(--p-small);
+      padding-block: var(--p-extrasmall);
+      border-radius: var(--br-large);
+      border: 2px solid transparent;
       .items-features-btn {
-        width: 100%;
-        height: auto;
-        background: transparent;
         font-size: var(--fs-normal);
         color: var(--clr-600);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        padding-inline: var(--p-small);
-        padding-block: var(--p-extrasmall);
-        border-radius: var(--br-large);
-        border: 2px solid transparent;
-
-        &:hover,
-        &:focus-visible,
-        &.features-active {
-          border-color: var(--clr-200);
-          box-shadow: 0px 0px 89px 124px rgba(142, 78, 142, 0.39) inset;
-          -webkit-box-shadow: 0px 0px 89px 124px rgba(142, 78, 142, 0.39) inset;
-          -moz-box-shadow: 0px 0px 89px 124px rgba(142, 78, 142, 0.39) inset;
-        }
+      }
+      &:hover,
+      &:focus-visible,
+      &.features-active {
+        border-color: var(--clr-200);
+        box-shadow: 0px 0px 89px 124px rgba(142, 78, 142, 0.39) inset;
+        -webkit-box-shadow: 0px 0px 89px 124px rgba(142, 78, 142, 0.39) inset;
+        -moz-box-shadow: 0px 0px 89px 124px rgba(142, 78, 142, 0.39) inset;
       }
     }
   }
