@@ -296,6 +296,7 @@ body {
 
 /* About */
 .about-container {
+  scroll-margin-top: var(--m-large);
   width: auto;
   height: max-content;
   margin-top: var(--m-large);
@@ -371,6 +372,7 @@ body {
 
 /* Snapshots */
 .snapshots-container {
+  scroll-margin-top: var(--m-large);
   width: auto;
   height: max-content;
   margin-top: var(--m-large);
@@ -418,6 +420,7 @@ body {
 
 /* Banner */
 .banner-container {
+  scroll-margin-top: var(--m-large);
   width: 100%;
   aspect-ratio: 1/0.1;
   margin-top: var(--m-large);
@@ -468,6 +471,7 @@ body {
 
 /* Features */
 .features-container {
+  scroll-margin-top: var(--m-large);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -562,6 +566,7 @@ body {
 
 /* FAQ */
 .faq-container {
+  scroll-margin-top: var(--m-large);
   width: auto;
   height: max-content;
   display: flex;
