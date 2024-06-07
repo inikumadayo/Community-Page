@@ -1,55 +1,52 @@
 // Features logic
-const appBtn = document.querySelector("#features-app-btn");
-const websiteBtn = document.querySelector("#features-website-btn");
-const adminBtn = document.querySelector("#features-admin-btn");
-const tvosBtn = document.querySelector("#features-tvos-btn");
-const btn = [appBtn, websiteBtn, adminBtn, tvosBtn];
+const menuFeatures = document.querySelectorAll(".menu-features-items");
+const featuresItems = document.querySelectorAll(".features");
+let features = [];
 
-const featuresApp = document.querySelector(".app");
-const featuresWebsite = document.querySelector(".website");
-const featuresAdmin = document.querySelector(".admin");
-const featuresTvos = document.querySelector(".tvos");
-const items = [featuresApp, featuresWebsite, featuresAdmin, featuresTvos];
+features.forEach.call(menuFeatures, (feature) => {
+  feature.addEventListener("click", menuClick, false);
+});
 
-function classCheck(btn) {
-  return btn.classList.contains("features-active");
-}
-
-function addClass(add) {
-  return add.classList.add("features-active");
-}
-
-function removeClass(rm) {
-  return rm.classList.remove("features-active");
-}
-
-function active(on, con) {
-  btn.forEach((item) => {
-    if (classCheck(item)) {
-      removeClass(item);
-    } else return;
+function menuClick() {
+  [].forEach.call(menuFeatures, (feature) => {
+    if (feature !== this) {
+      feature.classList.remove("features-active");
+    }
   });
-  items.forEach((item) => {
-    item.style.display = "none";
-  });
-  addClass(on);
-  con.style.display = "grid";
-  return;
-}
+  this.classList.toggle("features-active");
 
-appBtn.addEventListener("click", () => active(appBtn, featuresApp));
-websiteBtn.addEventListener("click", () => active(websiteBtn, featuresWebsite));
-adminBtn.addEventListener("click", () => active(adminBtn, featuresAdmin));
-tvosBtn.addEventListener("click", () => active(tvosBtn, featuresTvos));
+  const classCheck = (cls) => this.classList.contains(cls);
+  let nameCls;
+  if (classCheck("app")) {
+    nameCls = "app";
+  } else if (classCheck("website")) {
+    nameCls = "website";
+  } else if (classCheck("admin")) {
+    nameCls = "admin";
+  } else {
+    nameCls = "tvos";
+  }
+
+  [].forEach.call(featuresItems, (item) => {
+    if (!item.classList.contains(nameCls)) {
+      item.classList.remove("item-active");
+    }
+
+    if (item.classList.contains(nameCls)) {
+      item.classList.toggle("item-active");
+    }
+  });
+}
 
 // Contact logic
 const question = document.querySelectorAll(".question");
+let questionMenu = [];
 
-[].forEach.call(question, (el) => {
-  el.addEventListener("click", btnClick, false);
+questionMenu.forEach.call(question, (el) => {
+  el.addEventListener("click", questionClick, false);
 });
 
-function btnClick() {
+function questionClick() {
   [].forEach.call(question, (el) => {
     if (el !== this) el.classList.remove("question-active");
   });

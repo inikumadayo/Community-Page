@@ -512,7 +512,7 @@ body {
         color: var(--clr-600);
       }
       &:hover,
-      &:focus-visible,
+      &:focus-within,
       &.features-active {
         border-color: var(--clr-200);
         box-shadow: 0px 0px 89px 124px rgba(142, 78, 142, 0.39) inset;
@@ -527,6 +527,7 @@ body {
     margin-top: var(--m-normal);
     .features {
       gap: var(--gap-normal);
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
       .features-items {
         padding: var(--p-small);
@@ -552,16 +553,7 @@ body {
           font-size: var(--fs-normal);
         }
       }
-      &:is(.app) {
-        display: grid;
-      }
-      &:is(.website) {
-        display: none;
-      }
-      &:is(.admin) {
-        display: none;
-      }
-      &:is(.tvos) {
+      &:not(.item-active) {
         display: none;
       }
     }
@@ -617,7 +609,9 @@ body {
         display: none;
       }
       &:hover,
-      &:focus-visible,
+      &:focus-visible {
+        background-color: var(--clr-300);
+      }
       &:is(.question-active) {
         .faq-question-title {
           .faq-question-icon {
