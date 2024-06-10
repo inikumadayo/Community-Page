@@ -1,3 +1,18 @@
+// Navigation logic
+const mobileNavOpenBtn = document.querySelector(".open-nav-btn");
+const brandName = document.querySelector(".brand-link");
+const listMenu = document.querySelector(".list-container");
+
+mobileNavOpenBtn.addEventListener("click", () => {
+  if (brandName.style.display === "block") {
+    brandName.style.display = "none";
+    listMenu.style.display = "flex";
+  } else {
+    brandName.style.display = "block";
+    listMenu.style.display = "none";
+  }
+});
+
 // Features logic
 const menuFeatures = document.querySelectorAll(".menu-features-items");
 const featuresItems = document.querySelectorAll(".features");
