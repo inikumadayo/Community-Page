@@ -4,13 +4,8 @@ const brandName = document.querySelector(".brand-link");
 const listMenu = document.querySelector(".list-container");
 
 mobileNavOpenBtn.addEventListener("click", () => {
-  if (brandName.style.display === "block") {
-    brandName.style.display = "none";
-    listMenu.style.display = "flex";
-  } else {
-    brandName.style.display = "block";
-    listMenu.style.display = "none";
-  }
+  brandName.classList.toggle("brand-active");
+  listMenu.classList.toggle("menu-open");
 });
 
 // Features logic

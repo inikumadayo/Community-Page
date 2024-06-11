@@ -195,15 +195,21 @@ body {
       padding-inline: var(--p-normal);
       gap: var(--gap-normal);
       .brand-link {
-        display: block;
+        display: none;
+        &:is(.brand-active) {
+          display: block;
+        }
       }
       .list-container {
         display: none;
-        overflow-x: auto;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        &::-webkit-scrollbar {
-          display: none;
+        &:is(.menu-open) {
+          display: flex;
+          overflow-x: auto;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
         }
       }
       .open-nav-btn {
