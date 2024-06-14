@@ -1,0 +1,256 @@
+extends layout/layout.pug
+
+block body 
+    header.head-container#header
+        nav.navigation-container
+            a.brand-link.brand-active(href="#header")
+                h3.brand Kuma dayo
+            ul.list-container
+                li.list-items
+                    a.items-link(href="#about") About
+                li.list-items
+                    a.items-link(href="#snapshot") Snapshots
+                li.list-items
+                    a.items-link(href="#features") Features
+                li.list-items
+                    a.items-link(href="#faq") FAQ
+                li.list-items
+                    a.items-link(href="#testimonials") Testimonials
+                li.list-items
+                    a.items-link(href="#contact") Contact
+            .open-nav-btn
+                span.line1
+                span.line2
+                span.line3
+        section.head-content
+            article.text
+                h1.title Live Streaming
+                p.desc.
+        
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, beatae!
+        
+                button.head-content-btn Get Started
+            .head-img
+        .head-button-container
+            button.head-btn Let's Talk
+
+    section.about-container#about
+        .about-image-container
+        article.text-container
+            .desc
+                p.subtitle-about About Live streaming
+                h1.title-about About Live streaming
+                p.desc-text.
+        
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque pariatur recusandae labore laborum! Ab consectetur enim ducimus accusamus cupiditate consequuntur quisquam quidem, natus commodi corrupti molestiae vel laborum nulla nemo esse nesciunt optio saepe facilis illum, incidunt veritatis eaque? At nostrum porro tempore repellendus quos quo incidunt animi sit laudantium! Numquam aut
+        
+            button.about-btn
+                i.fa-solid.fa-arrow-up-right-from-square
+                h1.btn-txt Know More
+
+    section.snapshots-container#snapshot
+        article.text-container
+            p.subtitle-snapshots Have a look on our UI/UX design
+            h1.title-snapshots.
+      
+                Snapshots that make you feel interactive
+      
+        .snapshots-content
+            .snapshots-content-1
+            .snapshots-content-2
+            .snapshots-content-3
+
+    section.banner-container
+        h1.banner-title
+            | 
+            | Ready to turn your ideas 
+
+            span.icon 🎥
+            | 
+            | into reality? 
+
+            span.banner-important Reach our to us! 
+        a.banner-btn(href="#")
+            i.fa-solid.fa-arrow-up-right-from-square
+
+    section.features-container#features
+        p.subtitle-features Advance features
+        h1.title-features Advance features you can have benefit of
+        span.line-features
+        ul.menu-features-container
+            li.menu-features-items.app.features-active
+                a.items-features-btn(href="#features") App 
+            li.menu-features-items.website
+                a.items-features-btn(href="#features") Website
+            li.menu-features-items.admin
+                a.items-features-btn(href="#features") Admin
+            li.menu-features-items.tvos
+                a.items-features-btn(href="#features") TV OS
+        .features-items-container
+            .features.app.item-active
+                a.features-items(href="#")
+                    h1.items-features-title Login/SignUp
+                    p.items-features-desc.
+          
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, natus?
+          
+                a.features-items(href="#")
+                    h1.items-features-title Login/SignUp
+                    p.items-features-desc.
+          
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, natus?
+          
+            .features.website
+                    a.features-items(href="#")
+                        h1.items-features-title Login/SignUp
+                        p.items-features-desc.
+          
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, natus?
+          
+            .features.admin
+                    a.features-items(href="#")
+                        h1.items-features-title Login/SignUp
+                        p.items-features-desc.
+          
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, natus?
+          
+            .features.tvos
+                    a.features-items(href="#")
+                        h1.items-features-title Login/SignUp
+                        p.items-features-desc.
+          
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, natus?
+          
+    section.faq-container#faq
+        p.faq-subtitle Frequently ask questions
+        h1.faq-title FAQ
+        .faq-popular-question
+            a.question.question-active(href="#faq")
+                h1.faq-question-title
+                    span.question-head How i contact you?
+                    span.faq-question-icon +
+                p.faq-question-desc.
+        
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, quos!
+        
+            a.question(href="#faq")
+                h1.faq-question-title
+                    span.question-head How i contact you?
+                    span.faq-question-icon +
+                p.faq-question-desc.
+        
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, asperiores.
+        
+            a.question(href="#faq")
+                h1.faq-question-title
+                    span.question-head How i contact you?
+                    span.faq-question-icon +
+                p.faq-question-desc.
+        
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, unde.
+        
+            a.question(href="#faq")
+                h1.faq-question-title
+                    span.question-head How i contact you?
+                    span.faq-question-icon +
+                p.faq-question-desc.
+        
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, labore.
+        
+        h1.faq-title-2 Still have questions?
+        p.faq-desc.
+    
+            We're here to help. Contact us directly, and our team will provide you with the personalised support you need.
+    
+        a.faq-contact-btn(href="#contact") Contact
+
+    section.testimonials-container#testimonials
+        p.subtitle-testimonials What people say
+        h1.title-testimonials Client reviews
+        article.commands-testimonial-container
+            .command-items
+                h1.stars-testimonials 🌟🌟🌟🌟🌟
+                p.cmd-review Lorem ipsum dolor sit amet.
+                h1.name-people Naomi
+                p.people-desc Lorem, ipsum dolor.
+            .command-items
+                h1.stars-testimonials 🌟🌟🌟🌟🌟
+                p.cmd-review.
+        
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, in? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, consectetur architecto unde accusamus debitis quam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, rerum.
+        
+                h1.name-people Yuna
+                p.people-desc Lorem ipsum dolor sit.
+            .command-items
+                h1.stars-testimonials 🌟🌟🌟🌟🌟
+                p.cmd-review.
+        
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        
+                h1.name-people Kuma
+                p.people-desc Lorem, ipsum.
+            .command-items
+                h1.stars-testimonials 🌟🌟🌟🌟🌟
+                p.cmd-review.
+        
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        
+                h1.name-people Kuma
+                p.people-desc Lorem, ipsum.
+
+    section.send-testimonial-container
+        p.subtitle-send-testimonial Send your testimonial
+        h1.title-send-testimonial Your review
+        form.form-send-testimonial-container(method="post")
+            .radio-ratings-container
+                label.star-input-label(for="one-star") 1🌟
+                input.star-input#one-star(type="radio", name="ratings")
+                label.star-input-label(for="two-star") 2🌟
+                input.star-input#two-star(type="radio", name="ratings")
+                label.star-input-label(for="three-star") 3🌟
+                input.star-input#three-star(type="radio", name="ratings")
+                label.star-input-label(for="four-star") 4🌟
+                input.star-input#four-star(type="radio", name="ratings")
+                label.star-input-label(for="five-star") 5🌟
+                input.star-input#five-star(type="radio", name="ratings")
+            .name-reviewer
+                label.name-label(for="name") Name
+                input.name-input#name(required, type="text", name="nameReviewer", placeholder="Yuna")
+            .desc-reviewer
+                label.desc-label(for="desc") You buy what?
+                input.desc-input#desc(required, type="text", name="buy", placeholder="Contact page")
+            .review
+                p.yourReview Message
+                textarea.review-input#yourReview(required, name="yourReview", placeholder="Write your message here")
+            input.send-review-btn(type="submit", value="Send")
+
+    section.banner2-container
+        h1.text-banner2-one Start your
+        h1.text-banner2-two Project
+
+    footer.contact-container#contact
+        section.brand-footer
+            h1.brand-name-footer
+                a(href="#") Kuma dayo
+            p.brand-desc-footer.
+      
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, debitis!
+      
+        section.quick-link-footer
+            h1.quick-link-title Quick links
+            a.about-quick-link(href="#") About
+            a.products-quick-link(href="#") Products
+            a.portofolio-quick-link(href="#") Portofolio
+            a.careers-quick-link(href="#") Careers
+        section.contact-footer
+            h1.contact-footer-title Contact
+            i.fa-solid.fa-location-dot
+                span Location
+            p.location-desc Lorem ipsum dolor sit amet.
+            i.fa-solid.fa-phone
+                span Contact number
+            p.phone-num (+62) 868 8758 6553
+            i.fa-solid.fa-envelope
+                span Email
+            p.email-name yunadesu@gmail.com
+//- script(type="module", src="js/app.js")
