@@ -168,36 +168,49 @@ block body
         p.subtitle-testimonials What people say
         h1.title-testimonials Client reviews
         article.commands-testimonial-container
-            .command-items
-                h1.stars-testimonials 🌟🌟🌟🌟🌟
-                p.cmd-review Lorem ipsum dolor sit amet.
-                h1.name-people Naomi
-                p.people-desc Lorem, ipsum dolor.
+            each item in testimonials 
+                - let star
+                case item.stars
+                    when "1"
+                        - star = "🌟"
+                    when "2"
+                        - star = "🌟🌟"
+                    when "3"
+                        - star = "🌟🌟🌟"
+                    when "4"
+                        - star = "🌟🌟🌟🌟"
+                    default
+                        - star = "🌟🌟🌟🌟🌟"
+                .command-items
+                    h1.stars-testimonials= star
+                    p.cmd-review= item.cmd
+                    h1.name-people= item.name
+                    p.people-desc= item.pdesc
 
     section.send-testimonial-container
         p.subtitle-send-testimonial Send your testimonial
         h1.title-send-testimonial Your review
-        form.form-send-testimonial-container(method="post")
+        form.form-send-testimonial-container(method="post", action="/home")
             .radio-ratings-container
                 label.star-input-label(for="one-star") 1🌟
-                input.star-input#one-star(type="radio", name="ratings")
+                input.star-input#one-star(type="radio", name="stars", value="1")
                 label.star-input-label(for="two-star") 2🌟
-                input.star-input#two-star(type="radio", name="ratings")
+                input.star-input#two-star(type="radio", name="stars", value="2")
                 label.star-input-label(for="three-star") 3🌟
-                input.star-input#three-star(type="radio", name="ratings")
+                input.star-input#three-star(type="radio", name="stars", value="3")
                 label.star-input-label(for="four-star") 4🌟
-                input.star-input#four-star(type="radio", name="ratings")
+                input.star-input#four-star(type="radio", name="stars", value="4")
                 label.star-input-label(for="five-star") 5🌟
-                input.star-input#five-star(type="radio", name="ratings")
+                input.star-input#five-star(type="radio", name="stars", value="5")
             .name-reviewer
                 label.name-label(for="name") Name
-                input.name-input#name(required, type="text", name="nameReviewer", placeholder="Yuna")
+                input.name-input#name(required, type="text", name="name", placeholder="Yuna")
             .desc-reviewer
                 label.desc-label(for="desc") You buy what?
-                input.desc-input#desc(required, type="text", name="buy", placeholder="Contact page")
+                input.desc-input#desc(required, type="text", name="pdesc", placeholder="Contact page")
             .review
                 p.yourReview Message
-                textarea.review-input#yourReview(required, name="yourReview", placeholder="Write your message here")
+                textarea.review-input#yourReview(required, name="cmd", placeholder="Write your message here")
             input.send-review-btn(type="submit", value="Send")
 
     section.banner2-container
